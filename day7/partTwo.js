@@ -1,10 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 // create an array recording the number of crabs at each position
 const crabs = fs
   .readFileSync(path.join(__dirname, 'input'), { encoding: 'utf-8' })
