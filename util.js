@@ -14,3 +14,5 @@ module.exports.parseInput = (dirname, parser) => parser(fs.readFileSync(path.joi
 }
 
 module.exports.uniqueArrayOfArrays = arr => arr.filter((v, index, self) => module.exports.indexOfArray(self, v) === index)
+
+module.exports.loop = (n, fn, seed) => new Array(n).fill().reduce(fn, seed);
